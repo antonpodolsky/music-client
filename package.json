@@ -1,0 +1,32 @@
+{
+  "name": "template",
+  "version": "1.0.0",
+  "description": "template project",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "AP",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^0.25.0",
+    "jsx-loader": "^0.13.2",
+    "node-sass": "^3.10.0",
+    "sass-loader": "^4.0.2",
+    "style-loader": "^0.13.1",
+    "ts-loader": "^0.8.2",
+    "typescript": "^2.0.3",
+    "webpack": "^2.6.1",
+    "webpack-dev-server": "2"
+  },
+  "dependencies": {
+    "angular": "^1.6.1",
+    "director": "^1.2.8",
+    "jquery": "^3.1.1",
+    "material-design-lite": "^1.2.1",
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1",
+    "redux": "^3.6.0"
+  }
+}
