@@ -1,7 +1,7 @@
 {
-  "name": "template",
+  "name": "music_client",
   "version": "1.0.0",
-  "description": "template project",
+  "description": "Music client",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server",
@@ -12,7 +12,7 @@
   "devDependencies": {
     "css-loader": "^0.25.0",
     "jsx-loader": "^0.13.2",
-    "node-sass": "^3.10.0",
+    "node-sass": "^4.0.0",
     "sass-loader": "^4.0.2",
     "style-loader": "^0.13.1",
     "ts-loader": "^0.8.2",
@@ -21,12 +21,12 @@
     "webpack-dev-server": "2"
   },
   "dependencies": {
-    "angular": "^1.6.1",
+    "axios": "^0.17.1",
     "director": "^1.2.8",
+    "html-loader": "^0.5.1",
     "jquery": "^3.1.1",
     "material-design-lite": "^1.2.1",
-    "react": "^15.4.1",
-    "react-dom": "^15.4.1",
-    "redux": "^3.6.0"
+    "vue": "^2.5.6",
+    "vue-router": "^3.0.1"
   }
 }
