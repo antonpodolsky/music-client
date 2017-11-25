@@ -1,0 +1,9 @@
+<div class="artists">
+  <h1>Artists</h1>
+  <ul>
+    <li v-for="artist in artists">
+      <img :src="artist.image">
+      <router-link :to="{name: 'artist', params: {id: artist.id}}">{{artist.name}}</router-link>
+    </li>
+  </ul>
+</div>

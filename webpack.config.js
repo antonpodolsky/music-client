@@ -2,7 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
-  entry: './app/main.ts',
+  entry: './app/index.ts',
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist',
@@ -12,12 +12,6 @@ module.exports = {
   devServer: {
     contentBase: './app',
     noInfo: false,
-    // proxy: {
-    //   '/api': {
-    //     target: 'http://localhost:3000/api',
-    //     secure: false
-    //   }
-    // },
     proxy: [{
       path: `/api`,
       target: 'http://localhost:3000'
@@ -41,10 +35,10 @@ module.exports = {
   module: {
     loaders: [{
       test: /\.css$/,
-      loader: 'style!css'
+      loader: 'css-loader'
     }, { 
       test: /\.scss$/,
-      loader: 'style!css!sass'
+      loader: 'style-loader!css-loader!sass-loader'
     }, { 
       test: /\.(ts|tsx)$/,
       loader: 'ts-loader'
