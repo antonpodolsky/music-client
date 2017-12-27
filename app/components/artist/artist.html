@@ -1,9 +1,13 @@
 <div class="artist">
-  <h1>Albums</h1>
-  <ul>
-    <li v-for="album in artist.albums">
-      <img :src="album.image">
-      <router-link :to="{name: 'album', params: {id: album.id}}">{{album.name}}</router-link>
+  <ul class="grid mdl-grid">
+    <h2 class="mdl-typography--display-2 mdl-cell mdl-cell--12-col">{{artist.name}}</h2>
+    <h1 class="mdl-typography--display-1 mdl-cell mdl-cell--12-col">Albums</h1>
+    <li class="card mdl-card mdl-shadow--2dp" v-for="album in artist.albums">
+      <router-link class="mdl-card__title" :to="{name: 'album', params: {id: album.id}}">
+        <img :src="album.image">
+      </router-link>
+
+      <div class="mdl-card__supporting-text">{{album.name}}</div>
     </li>
   </ul>
 </div>
