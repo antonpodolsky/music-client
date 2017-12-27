@@ -1,6 +1,43 @@
 @import '../../css/reset';
 
 body {
-  padding: 20px;
   font-family: Roboto;
+  background-color: #fafafa;
+
+  #app {
+    padding: 20px;
+  }
+
+  .grid {
+    max-width: 1800px;
+
+    &.mdl-grid {
+      > * {
+        margin: 0 20px 20px 0;
+      }
+    }
+  }
+
+  .card {
+    &.mdl-card {
+      width: 200px;
+
+      .mdl-card__title {
+        height: 200px;
+        padding: 0;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .mdl-card__supporting-text {
+        width: auto;
+        font-size: 15px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
 }

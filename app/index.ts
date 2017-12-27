@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import {app, artists, artist, album} from './bootstrap';
+import './bootstrap';
+import {app, artists, artist, album} from './components';
 
 Vue.use(VueRouter);
 

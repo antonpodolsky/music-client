@@ -1,2 +1,1 @@
-export {app, artists, artist, album} from './components';
-
+import 'material-design-lite/dist/material.blue_grey-orange.min.css';
