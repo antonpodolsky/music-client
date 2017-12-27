@@ -1,11 +1,27 @@
 @import '../../css/reset';
 
 body {
+  height: 100%;
   font-family: Roboto;
   background-color: #fafafa;
 
-  #app {
-    padding: 20px;
+  #app,
+  #app > div {
+    height: 100%;
+  }
+
+  header {
+    &.mdl-layout__header {
+      margin-bottom: 20px;
+      background-color: white;
+      border-bottom: 1px solid #e0e0e0;
+    }
+  }
+
+  main {
+    &.mdl-layout__content {
+      display: block;
+    }
   }
 
   .grid {

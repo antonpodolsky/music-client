@@ -1,12 +1,11 @@
-<div class="artists">
-  <ul class="grid mdl-grid">
-    <h1 class="mdl-typography--display-1 mdl-cell mdl-cell--12-col">Artists</h1>
-    <li class="card mdl-card mdl-shadow--2dp" v-for="artist in artists">
-      <router-link class="mdl-card__title" :to="{name: 'artist', params: {id: artist.id}}">
-        <img :src="artist.image">
-      </router-link>
+<div class="artists grid mdl-grid">
+  <div class="mdl-typography--title mdl-cell mdl-cell--12-col">Artists</div>
+  
+  <div class="card mdl-card mdl-shadow--2dp" v-for="artist in artists">
+    <router-link class="mdl-card__title" :to="{name: 'artist', params: {id: artist.id}}">
+      <img :src="artist.image">
+    </router-link>
 
-      <div class="mdl-card__supporting-text">{{artist.name}}</div>
-    </li>
-  </ul>
+    <div class="mdl-card__supporting-text">{{artist.name}}</div>
+  </div>
 </div>

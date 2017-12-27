@@ -8,6 +8,8 @@ export default Vue.component('album', {
   template,
   data: () => ({
     album: {
+      name: '',
+      artist: '',
       tracks: []
     }
   }),

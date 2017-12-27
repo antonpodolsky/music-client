@@ -1,8 +1,12 @@
-<div>
-  <h1>Tracks</h1>
-  <ul>
+<div class="artist grid mdl-grid">
+  <div class="mdl-cell mdl-cell--12-col">
+    <div class="mdl-typography--display-1">{{album.name}}</div>
+    {{album.artist}}
+  </div>
+
+  <ul class="mdl-cell--12-col">
     <li v-for="track in album.tracks">
-      {{track.name}}
+      <div>{{track['track #']}}. {{track.name}}</div>
     </li>
   </ul>
 </div>
