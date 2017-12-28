@@ -1,12 +1,28 @@
-<div class="artist grid mdl-grid">
+<div class="album grid mdl-grid">
   <div class="mdl-cell mdl-cell--12-col">
     <div class="mdl-typography--display-1">{{album.name}}</div>
     {{album.artist}}
   </div>
 
-  <ul class="mdl-cell--12-col">
-    <li v-for="track in album.tracks">
-      <div>{{track['track #']}}. {{track.name}}</div>
-    </li>
+  <table class="mdl-cell--12-col mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+    <thead>
+      <tr>
+        <th class="mdl-data-table__header--sorted-descending">#</th>
+        <th class="mdl-data-table__cell--non-numeric">Name</th>
+        <th class="mdl-data-table__cell--non-numeric">Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr v-for="track in album.tracks" v-on:click.prevent="play(track)">
+        <td>
+          {{track['track #']}}
+        </td>
+        <td class="mdl-data-table__cell--non-numeric">
+          {{track.name}}
+        </td>
+        <td class="mdl-data-table__cell--non-numeric">
+          {{track['file type']}}
+        </td>  
+      </tr>
   </ul>
 </div>

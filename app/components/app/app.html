@@ -1,8 +1,15 @@
 <div>
   <header class="mdl-layout__header mdl-layout__header--seamed">
+    <div class="mdl-layout__header-row">
+      <button class="mdl-button mdl-js-button mdl-button--icon">
+        <router-link :to="{name: 'artists'}">
+          <i class="material-icons">home</i>
+        </router-link>
+      </button>
+    </div>  
   </header>
 
-  <main class="mdl-layout__content">
+  <main class="mdl-layout__content mdl-color-text--grey-600">
     <router-view ></router-view>
   </main>
 </div>    

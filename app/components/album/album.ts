@@ -13,6 +13,11 @@ export default Vue.component('album', {
       tracks: []
     }
   }),
+  methods: {
+    play(track) {
+      axios.get(`/api/play/${track.id}`);
+    }
+  },
   beforeRouteEnter(to, from, next) {
     axios.get(`/api/album/${to.params.id}`).then(({data}) => next(vm => vm.$data.album = data));
   }
