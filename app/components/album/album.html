@@ -13,9 +13,12 @@
       </tr>
     </thead>
     <tbody>
-      <tr v-for="track in album.tracks" v-on:click.prevent="play(track)">
+      <tr v-for="track in album.tracks" v-on:dblclick="play(track)">
         <td>
-          {{track['track #']}}
+          <span>{{track['track #']}}</span>
+          <button class="mdl-button mdl-js-button mdl-button--icon" v-on:click="play(track)">
+            <i class="material-icons">play_arrow</i>
+          </button>
         </td>
         <td class="mdl-data-table__cell--non-numeric">
           {{track.name}}

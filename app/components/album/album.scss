@@ -13,7 +13,23 @@
           border-color: rgba(0, 0, 0, 0.06);
 
           &:first-child {
-            width: 30px;
+            width: 75px;
+
+            > *:last-child {
+              display: none;
+            }
+          }
+        }
+
+        &:hover {
+          td:first-child {
+            > *:last-child {
+              display: block;
+            }
+
+            > *:first-child {
+              display: none;
+            }
           }
         }
       }
